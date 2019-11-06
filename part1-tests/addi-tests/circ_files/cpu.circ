@@ -230,6 +230,7 @@
     <wire from="(1110,760)" to="(1150,760)"/>
     <wire from="(670,930)" to="(1310,930)"/>
     <wire from="(1230,190)" to="(1230,220)"/>
+    <wire from="(530,720)" to="(590,720)"/>
     <wire from="(610,720)" to="(670,720)"/>
     <wire from="(610,730)" to="(610,990)"/>
     <wire from="(1520,210)" to="(1560,210)"/>
@@ -253,6 +254,7 @@
     <wire from="(670,720)" to="(670,750)"/>
     <wire from="(590,280)" to="(590,310)"/>
     <wire from="(590,70)" to="(590,150)"/>
+    <wire from="(470,760)" to="(470,790)"/>
     <wire from="(240,130)" to="(240,160)"/>
     <wire from="(1160,210)" to="(1210,210)"/>
     <wire from="(1030,780)" to="(1110,780)"/>
@@ -263,9 +265,12 @@
     <wire from="(1190,660)" to="(1220,660)"/>
     <wire from="(630,710)" to="(700,710)"/>
     <wire from="(810,90)" to="(810,210)"/>
+    <wire from="(410,740)" to="(410,790)"/>
     <wire from="(1030,680)" to="(1040,680)"/>
+    <wire from="(410,740)" to="(470,740)"/>
     <wire from="(200,450)" to="(200,520)"/>
     <wire from="(670,790)" to="(670,930)"/>
+    <wire from="(420,720)" to="(470,720)"/>
     <wire from="(1180,770)" to="(1220,770)"/>
     <wire from="(1410,190)" to="(1410,220)"/>
     <wire from="(190,130)" to="(240,130)"/>
@@ -315,7 +320,6 @@
     <wire from="(900,990)" to="(1120,990)"/>
     <wire from="(200,70)" to="(200,120)"/>
     <wire from="(520,170)" to="(600,170)"/>
-    <wire from="(510,720)" to="(590,720)"/>
     <wire from="(200,70)" to="(590,70)"/>
     <wire from="(110,420)" to="(310,420)"/>
     <wire from="(770,840)" to="(770,890)"/>
@@ -471,11 +475,6 @@
       <a name="enable" val="false"/>
     </comp>
     <comp lib="0" loc="(1150,810)" name="Constant"/>
-    <comp lib="0" loc="(510,720)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="32"/>
-      <a name="label" val="INSTRUCTION"/>
-    </comp>
     <comp lib="0" loc="(770,590)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="width" val="32"/>
@@ -618,5 +617,18 @@
     <comp lib="0" loc="(1420,550)" name="Tunnel">
       <a name="label" val="clk"/>
     </comp>
+    <comp lib="0" loc="(420,720)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="INSTRUCTION"/>
+    </comp>
+    <comp lib="4" loc="(470,690)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(470,790)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(410,790)" name="Constant"/>
   </circuit>
 </project>
