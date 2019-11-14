@@ -15,7 +15,7 @@ create = 0
 log = 0
 
 file_locations = os.path.expanduser(os.getcwd())
-logisim_location = os.path.join(os.getcwd(),"../../../logisim-evolution.jar")
+logisim_location = os.path.join(os.getcwd(),"../../logisim-evolution.jar")
 if log:
   new = open('new.out', 'w')
   logfile = open('TEST_LOG','w')
@@ -81,7 +81,7 @@ class AbsoluteTestCase(TestCase):
 
 def test_submission(name,outfile,tests):
   # actual submission testing code
-  print ("Testing submission")
+  print ("Testing your tests (two-stage processor)...")
   total_points = 0
   total_points_received = 0
   tests_passed = 0
@@ -136,5 +136,5 @@ def test_submission(name,outfile,tests):
 
 
 def main(tests):
-  test_submission('ADDI',sys.stdout,tests)
+  test_submission('you',sys.stdout,tests)
     

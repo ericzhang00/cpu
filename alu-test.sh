@@ -8,5 +8,6 @@ cp alu.circ part1-tests/alu-tests/alu_tests
 cd part1-tests/alu-tests
 rm -rf student_output
 mkdir student_output
+chmod +x alu-test.py
 ./alu-test.py
 cd ../../

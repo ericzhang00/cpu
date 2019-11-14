@@ -8,5 +8,6 @@ cp regfile.circ part1-tests/reg-tests/regfile_tests
 cd part1-tests/reg-tests
 rm -rf student_output
 mkdir student_output
+chmod +x reg-test.py
 ./reg-test.py
 cd ../..

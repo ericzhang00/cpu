@@ -15,18 +15,25 @@ create = 0
 log = 0
 
 file_locations = os.path.expanduser(os.getcwd())
-logisim_location = os.path.join(os.getcwd(),"../../../logisim-evolution.jar")
+logisim_location = os.path.join(os.getcwd(),"../../logisim-evolution.jar")
 if log:
   new = open('new.out', 'w')
   logfile = open('TEST_LOG','w')
 
 
 def student_reference_match_unbounded(student_out, reference_out):
+  warning_printed = False
   while True:
     line1 = student_out.readline()
     line2 = reference_out.readline()
     if line2 == '':
       break
+
+    # check for disconnected harness
+#    if 'xxxx' in line1 and not warning_printed:
+#      warning_printed = True
+#      print("Warning: undefined results found in student output. It's likely that the harness is not connecting to your inputs and outputs.")
+
     if line1 != line2:
       return False
   return True
@@ -81,7 +88,7 @@ class AbsoluteTestCase(TestCase):
 
 def test_submission(name,outfile,tests):
   # actual submission testing code
-  print ("Testing submission")
+  print ("Testing submission for %s (two-stage processor)..." % name)
   total_points = 0
   total_points_received = 0
   tests_passed = 0
@@ -136,5 +143,5 @@ def test_submission(name,outfile,tests):
 
 
 def main(tests):
-  test_submission('ADDI',sys.stdout,tests)
+  test_submission('sanity',sys.stdout,tests)
     
