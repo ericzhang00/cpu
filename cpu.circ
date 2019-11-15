@@ -729,6 +729,7 @@
     <comp lib="0" loc="(690,240)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
+      <a name="width" val="3"/>
       <a name="label" val="ImmSel"/>
       <a name="labelloc" val="north"/>
     </comp>
