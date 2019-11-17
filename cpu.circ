@@ -4,49 +4,18 @@
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="32"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
       <a name="appear" val="center"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="0"/>
-      <a name="bit9" val="0"/>
-      <a name="bit10" val="0"/>
-      <a name="bit11" val="0"/>
-      <a name="bit12" val="0"/>
-      <a name="bit13" val="0"/>
-      <a name="bit14" val="0"/>
-      <a name="bit15" val="0"/>
-      <a name="bit16" val="1"/>
-      <a name="bit17" val="1"/>
-      <a name="bit18" val="1"/>
-      <a name="bit19" val="1"/>
-      <a name="bit20" val="1"/>
-      <a name="bit21" val="1"/>
-      <a name="bit22" val="1"/>
-      <a name="bit23" val="1"/>
-      <a name="bit24" val="1"/>
-      <a name="bit25" val="1"/>
-      <a name="bit26" val="1"/>
-      <a name="bit27" val="1"/>
-      <a name="bit28" val="1"/>
-      <a name="bit29" val="1"/>
-      <a name="bit30" val="1"/>
-      <a name="bit31" val="1"/>
     </tool>
     <tool name="Pin">
       <a name="facing" val="north"/>
     </tool>
     <tool name="Probe">
-      <a name="radix" val="10signed"/>
+      <a name="radix" val="16"/>
     </tool>
     <tool name="Tunnel">
-      <a name="width" val="32"/>
+      <a name="width" val="2"/>
     </tool>
     <tool name="Pull Resistor">
       <a name="facing" val="north"/>
@@ -55,7 +24,8 @@
       <a name="facing" val="north"/>
     </tool>
     <tool name="Constant">
-      <a name="value" val="0x0"/>
+      <a name="width" val="8"/>
+      <a name="value" val="0xff"/>
     </tool>
     <tool name="Bit Extender">
       <a name="in_width" val="32"/>
@@ -696,8 +666,8 @@
     <wire from="(520,200)" to="(520,210)"/>
     <wire from="(1070,740)" to="(1130,740)"/>
     <wire from="(1070,780)" to="(1130,780)"/>
-    <wire from="(1070,620)" to="(1130,620)"/>
     <wire from="(1070,660)" to="(1130,660)"/>
+    <wire from="(1070,620)" to="(1130,620)"/>
     <wire from="(1190,1140)" to="(1250,1140)"/>
     <wire from="(1240,430)" to="(1300,430)"/>
     <wire from="(1080,920)" to="(1080,930)"/>
@@ -732,12 +702,12 @@
     <wire from="(70,1250)" to="(110,1250)"/>
     <wire from="(70,1330)" to="(110,1330)"/>
     <wire from="(70,1410)" to="(110,1410)"/>
-    <wire from="(1050,640)" to="(1130,640)"/>
-    <wire from="(1050,840)" to="(1130,840)"/>
     <wire from="(1040,1150)" to="(1120,1150)"/>
-    <wire from="(1050,760)" to="(1130,760)"/>
+    <wire from="(1050,640)" to="(1130,640)"/>
     <wire from="(1050,960)" to="(1130,960)"/>
     <wire from="(1090,440)" to="(1170,440)"/>
+    <wire from="(1050,840)" to="(1130,840)"/>
+    <wire from="(1050,760)" to="(1130,760)"/>
     <wire from="(100,1090)" to="(130,1090)"/>
     <wire from="(100,1050)" to="(130,1050)"/>
     <wire from="(150,1260)" to="(180,1260)"/>
@@ -770,10 +740,10 @@
     <wire from="(260,200)" to="(260,210)"/>
     <wire from="(1200,890)" to="(1260,890)"/>
     <wire from="(1200,540)" to="(1200,550)"/>
+    <wire from="(1080,980)" to="(1080,990)"/>
     <wire from="(690,60)" to="(690,140)"/>
     <wire from="(1070,1170)" to="(1070,1180)"/>
     <wire from="(1080,860)" to="(1080,870)"/>
-    <wire from="(1080,980)" to="(1080,990)"/>
     <wire from="(1120,460)" to="(1120,470)"/>
     <wire from="(1200,540)" to="(1250,540)"/>
     <wire from="(1070,1170)" to="(1120,1170)"/>
@@ -1113,13 +1083,6 @@
       <a name="label" val="PCSel"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(450,530)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="label" val="ALUSel"/>
-      <a name="labelloc" val="north"/>
-    </comp>
     <comp lib="6" loc="(957,1254)" name="Text">
       <a name="text" val="jalr"/>
       <a name="font" val="SansSerif plain 12"/>
@@ -1197,13 +1160,6 @@
     <comp lib="0" loc="(1070,620)" name="Constant">
       <a name="width" val="3"/>
       <a name="value" val="0x3"/>
-    </comp>
-    <comp lib="0" loc="(450,580)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="2"/>
-      <a name="label" val="WBSel"/>
-      <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(1360,530)" name="Pin">
       <a name="facing" val="west"/>
@@ -1441,6 +1397,35 @@
     <comp lib="3" loc="(150,1260)" name="Comparator">
       <a name="width" val="17"/>
       <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="0" loc="(690,430)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="ALUSel"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1310,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="label" val="WBSel"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(520,700)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isAdd"/>
+      <a name="labelfont" val="SansSerif bold 9"/>
+    </comp>
+    <comp lib="0" loc="(520,780)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isSub"/>
+      <a name="labelfont" val="SansSerif bold 9"/>
+    </comp>
+    <comp lib="0" loc="(520,740)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isMul"/>
+      <a name="labelfont" val="SansSerif bold 9"/>
     </comp>
   </circuit>
   <circuit name="immediate_generator">
