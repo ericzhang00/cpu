@@ -10,9 +10,10 @@ jal x1 dothis
 blt x0 x9 loop
 
 dothis:
-jalr x1 x0 0
+jalr x1 x1 0
 
 end0:
+jal x1 dothis
 add x0 x0 x0
 #lui x7 -61 #should fail
 
