@@ -9,8 +9,8 @@ addi x9 x9 1
 jal x1 -24
 blt x0 x9 loop
 
-neverdothis:
-jal x1 0
+# neverdothis:
+# jal x1 0
 
 end0:
 add x0 x0 x0
