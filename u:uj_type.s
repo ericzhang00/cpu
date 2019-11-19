@@ -14,7 +14,7 @@ jalr x1 x0 0
 
 end0:
 add x0 x0 x0
-lui x7 -61 #should fail
+#lui x7 -61 #should fail
 
 
 
