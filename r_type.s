@@ -7,6 +7,12 @@ add x2 x1 x2 #x2 = 61 + 61 = 122
 add x5 x1 x1 #x5 = 61 + 61 = 122
 add x1 x5 x2 #x1 = 122 + 122 = 244
 
+# add x1 x0 x0
+# add x2 x1 x1
+# add x0 x1 x1
+# add x5 x2 x1
+# addi x6 x0 2
+
 addi x6 x5 -120 #x6 = 122 - 120 = 2
 addi x7 x0 5 #x7 = 5
 addi x10 x0 -2 #x10 = -2
