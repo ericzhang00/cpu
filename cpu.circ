@@ -1107,7 +1107,6 @@
     <wire from="(600,1740)" to="(630,1740)"/>
     <wire from="(1840,960)" to="(1840,1010)"/>
     <wire from="(910,3230)" to="(910,3290)"/>
-    <wire from="(1460,1640)" to="(1490,1640)"/>
     <wire from="(1700,1890)" to="(1720,1890)"/>
     <wire from="(1400,940)" to="(1430,940)"/>
     <wire from="(930,2090)" to="(940,2090)"/>
@@ -1356,7 +1355,6 @@
     <wire from="(1550,1650)" to="(1550,1670)"/>
     <wire from="(400,1280)" to="(520,1280)"/>
     <wire from="(1770,2190)" to="(1770,2200)"/>
-    <wire from="(1440,1620)" to="(1490,1620)"/>
     <wire from="(770,2150)" to="(770,2170)"/>
     <wire from="(1170,630)" to="(1170,640)"/>
     <wire from="(890,1630)" to="(890,1650)"/>
@@ -1555,7 +1553,6 @@
     <wire from="(510,1730)" to="(560,1730)"/>
     <wire from="(1560,1820)" to="(1610,1820)"/>
     <wire from="(1200,180)" to="(1250,180)"/>
-    <wire from="(1460,1640)" to="(1460,1650)"/>
     <wire from="(1210,830)" to="(1260,830)"/>
     <wire from="(270,3100)" to="(310,3100)"/>
     <wire from="(1020,2880)" to="(1070,2880)"/>
@@ -1608,6 +1605,7 @@
     <wire from="(240,1060)" to="(240,1200)"/>
     <wire from="(1350,1590)" to="(2350,1590)"/>
     <wire from="(280,3280)" to="(280,3290)"/>
+    <wire from="(1430,1620)" to="(1490,1620)"/>
     <wire from="(1570,1130)" to="(1620,1130)"/>
     <wire from="(1450,410)" to="(1460,410)"/>
     <wire from="(1310,1230)" to="(1320,1230)"/>
@@ -1672,6 +1670,7 @@
     <wire from="(830,2270)" to="(860,2270)"/>
     <wire from="(1420,690)" to="(1510,690)"/>
     <wire from="(1590,1110)" to="(1620,1110)"/>
+    <wire from="(1470,1640)" to="(1490,1640)"/>
     <wire from="(2360,90)" to="(2390,90)"/>
     <wire from="(660,1100)" to="(660,1300)"/>
     <wire from="(770,720)" to="(820,720)"/>
@@ -3166,10 +3165,6 @@
       <a name="width" val="3"/>
       <a name="value" val="0x2"/>
     </comp>
-    <comp lib="0" loc="(1460,1650)" name="Constant">
-      <a name="width" val="3"/>
-      <a name="value" val="0x2"/>
-    </comp>
     <comp lib="3" loc="(1530,1670)" name="Comparator">
       <a name="width" val="3"/>
       <a name="mode" val="unsigned"/>
@@ -3182,15 +3177,6 @@
     <comp lib="6" loc="(1473,1675)" name="Text">
       <a name="text" val="lw"/>
       <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="3" loc="(1530,1630)" name="Comparator">
-      <a name="width" val="3"/>
-      <a name="mode" val="unsigned"/>
-    </comp>
-    <comp lib="0" loc="(1440,1620)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="3"/>
-      <a name="label" val="inst_type"/>
     </comp>
     <comp lib="1" loc="(1590,1640)" name="AND Gate">
       <a name="size" val="30"/>
@@ -4080,6 +4066,19 @@
     <comp lib="3" loc="(560,1980)" name="Comparator">
       <a name="width" val="7"/>
       <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="3" loc="(1530,1630)" name="Comparator">
+      <a name="width" val="7"/>
+      <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="0" loc="(1430,1620)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="instID_U_UJ"/>
+    </comp>
+    <comp lib="0" loc="(1470,1640)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x3"/>
     </comp>
   </circuit>
   <circuit name="immediate_generator">
