@@ -75,26 +75,34 @@ remu x2 x6 x5 #0
 remu x2 x7 x8 #14
 remu x2 x7 x5 #0
 
-
-
-#x9 = storage (sw)
-#x2 = output (lw)
-addi x5 x0 -1234 #x5 = -1234
-addi x1 x0 2047
+addi x1 x0 2040
+addi x5 x0 1234 #x5 = 0x000004D2
+addi x6 x0 1560 #x6 = 0x00000618
 sw x5 0(x1)
-lw x2 0(x1) #0xFFFFFB2E
-lb x2 1(x1) #0xFFFFFB2E X  -> 0 
-lh x2 2(x1) #0xFFFFFFFF X  -> 0
-lh x2 0(x1) #0xFFFFFB2E
+sw x6 4(x1)
 
-addi x5 x0 1234 #x5 = 1234
-sw x5 0(x1)
 lw x2 0(x1) #0x000004D2
-lb x2 4(x1) #0x00000023 X  -> 0
-lh x2 2(x1) #0x00000000
-lh x2 0(x1) #0x000004D2
+lw x2 4(x1) #0x00000618
+
+lb x2 0(x1) #0xFFFFFFD2
+lb x2 1(x1) #0x00000004 
+lb x2 2(x1) #0x00000000 
+lb x2 3(x1) #0x00000000 
+
+lb x2 4(x1) #0x00000018 
+lb x2 5(x1) #0x00000006 
+
+
+lh x2 0(x1) #0x000004D2 
+lh x2 2(x1) #0x00000000 X 000004D2
+lh x2 4(x1) #0x00000618 
 
 lui x2 7 #0x00007000
 lui x2 1 #0000 0001 -- -- 0000
 lui x2 2 #0000 0010 -- -- 0000
+
+addi x6 x0 1
+slli x6 x6 31
+mulhu x2 x6 x6 #0x40000000 
+
 
